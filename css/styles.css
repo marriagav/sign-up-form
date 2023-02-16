@@ -1,0 +1,163 @@
+@font-face {
+  font-family: logo-font;
+  src: url(../fonts/Norse-Bold.otf);
+}
+
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --logo-font: logo-font;
+  --light-gray: rgb(249, 250, 251);
+  --dark-gray: rgb(95, 95, 95);
+  --medium-gray: rgb(167, 167, 167);
+  --green: #596d48;
+  --correct: #3b3dc0;
+  --error: rgb(199, 30, 30);
+  font-family: var(--system-ui);
+}
+body {
+  margin: 0;
+  background-color: var(--light-gray);
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: var(--logo-font, var(--system-ui));
+  font-size: 100px;
+  font-size: 10vh;
+  color: white;
+  text-align: center;
+}
+.left {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+#background-image {
+  z-index: 0;
+  height: 100vh;
+}
+#logo {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.336);
+  width: 100%;
+  top: 20%;
+}
+#credits {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 15px;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+}
+.form {
+  background-color: white;
+  padding: 20px;
+  display: block;
+  height: calc(100% + 20px);
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+  border: 0;
+}
+.pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  gap: 10%;
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 250px;
+  gap: 3px;
+}
+input {
+  width: 100%;
+  height: 22px;
+  border-color: var(--medium-gray);
+  border-width: 0.5px;
+  border-radius: 3px;
+  border-style: solid;
+}
+input:hover {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+input:valid {
+  border-color: var(--correct);
+  border-width: 1px;
+}
+input:invalid {
+  border-color: var(--error);
+  border-width: 1px;
+}
+input:focus:valid {
+  outline-width: 2;
+  outline-color: var(--correct);
+}
+input:focus:invalid {
+  outline-width: 2;
+  outline-color: var(--error);
+}
+legend {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+label {
+  color: var(--dark-gray);
+  font-size: small;
+  font-weight: bold;
+}
+button {
+  color: white;
+  background-color: #596d48;
+  border-radius: 5px;
+  border: 0;
+  height: 40px;
+  width: 25%;
+  font-weight: bold;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+button:hover {
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: bold;
+}
+.bait,
+#login {
+  padding-left: 35px;
+}
+.errorMessage {
+  font-size: small;
+  color: var(--error);
+  margin: 0;
+  margin-top: -10px;
+}
